@@ -1,5 +1,5 @@
 import math
-import os
+import shutil
 
 
 class Printer(object):
@@ -36,13 +36,13 @@ There are {} other {plural} that are the same between environments.""".format(
         if not values:
             return ""
 
-        _, width = os.popen('stty size', 'r').read().split()
+        width = shutil.get_terminal_size().columns
         max_size = max([len(str(value)) for value in values])
         columns = max(
             1,
-            min([math.floor(int(width) / (max_size + 1)), len(values)])
+            min([math.floor(width / (max_size + 1)), len(values)])
         )
-        column_width = math.floor(int(width) / columns)
+        column_width = math.floor(width / columns)
 
         return "\n".join(
             "".join(
