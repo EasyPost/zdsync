@@ -14,7 +14,7 @@ There are two required environment variables,
  * `SANDBOX_SUBDOMAIN` - The subdomain of your sandbox environment, e.g. `mycompany1552085434`.
  * `PRODUCTION_SUBDOMAIN` - The subdomain of your production environment, e.g. `mycompany`.
 
-There are three ways to authenticate to the Zendesk API and different environment variables need to be depending on your prefered method of authentication.
+There are three ways to authenticate to the Zendesk API and different environment variables are needed depending on your preferred method of authentication.
 
  * Email & Password
    * `SANDBOX_EMAIL` - The email that is used as your username when logging into your sandbox environment.
