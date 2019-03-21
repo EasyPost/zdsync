@@ -14,10 +14,20 @@ class Client(object):
         "TicketForm": "ticket_forms"
     }
 
-    def __init__(self, subdomain, oauth_token):
+    def __init__(
+        self,
+        subdomain=None,
+        email=None,
+        password=None,
+        token=None,
+        oauth_token=None
+    ):
         self.subdomain = subdomain
         self._client = zenpy.Zenpy(
             subdomain=subdomain,
+            email=email,
+            password=password,
+            token=token,
             oauth_token=oauth_token
         )
 

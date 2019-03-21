@@ -20,12 +20,18 @@ class Synchronizer(object):
 
     def __init__(self):
         self.sandbox_client = Client(
-            os.environ.get("SANDBOX_SUBDOMAIN"),
-            os.environ.get("SANDBOX_TOKEN")
+            subdomain=os.environ.get("SANDBOX_SUBDOMAIN"),
+            email=os.environ.get("SANDBOX_EMAIL"),
+            password=os.environ.get("SANDBOX_PASSWORD"),
+            token=os.environ.get("SANDBOX_TOKEN"),
+            oauth_token=os.environ.get("SANDBOX_OAUTH_TOKEN")
         )
         self.production_client = Client(
-            os.environ.get("PRODUCTION_SUBDOMAIN"),
-            os.environ.get("PRODUCTION_TOKEN")
+            subdomain=os.environ.get("PRODUCTION_SUBDOMAIN"),
+            email=os.environ.get("PRODUCTION_EMAIL"),
+            password=os.environ.get("PRODUCTION_PASSWORD"),
+            token=os.environ.get("PRODUCTION_TOKEN"),
+            oauth_token=os.environ.get("PRODUCTION_OAUTH_TOKEN")
         )
 
     @property
