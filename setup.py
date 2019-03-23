@@ -6,7 +6,7 @@ from setuptools import (
 
 setup(
     name="zdsync",
-    version="0.0.1",
+    version="0.0.2",
     author="Andrew Tribone",
     author_email="oss@easypost.com",
     url="https://github.com/easypost/zdsync",
@@ -24,8 +24,7 @@ setup(
         "Environment :: Console",
         "Programming Language :: Python :: 3.7",
         "Intended Audience :: Developers",
-        "Operating System :: MacOS X",
-        "Operating System :: Unix",
+        "Operating System :: OS Independent",
         "Topic :: Software Development :: Quality Assurance",
         "License :: OSI Approved :: ISC License (ISCL)",
     ]

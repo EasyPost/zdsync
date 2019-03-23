@@ -44,17 +44,22 @@ def main():
         action="store_true",
         help="Operate on Macros"
     )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Operate on all object types"
+    )
     args = parser.parse_args()
 
-    if args.brands:
+    if args.brands or args.all:
         BrandSynchronizer().run(execute=args.execute)
-    if args.groups:
+    if args.groups or args.all:
         GroupSynchronizer().run(execute=args.execute)
-    if args.ticket_fields:
+    if args.ticket_fields or args.all:
         TicketFieldSynchronizer().run(execute=args.execute)
-    if args.ticket_forms:
+    if args.ticket_forms or args.all:
         TicketFormSynchronizer().run(execute=args.execute)
-    if args.macros:
+    if args.macros or args.all:
         MacroSynchronizer().run(execute=args.execute)
 
 

@@ -9,8 +9,7 @@ class Printer(object):
 
     def output(self):
         print(
-            """
-The following {plural} only exist in the sandbox:
+            """The following {plural} only exist in the sandbox:
 {}
 
 The following {plural} only exist in production:
@@ -19,7 +18,8 @@ The following {plural} only exist in production:
 The following {plural} are different between environments:
 {}
 
-There are {} other {plural} that are the same between environments.""".format(
+There are {} other {plural} that are the same between environments.
+""".format(
                 self.in_columns(self._synchronizer.only_in_sandbox),
                 self.in_columns(self._synchronizer.only_in_production),
                 self.in_columns(self._synchronizer.in_both_but_different),

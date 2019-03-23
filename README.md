@@ -38,9 +38,9 @@ There are five supported objects for syncing,
  * `--ticket-forms`
  * `--macros`
 
-It its recommended to sync in this order since there are object dependencies as you progress through the list. If you pass all the flags at once it will sync in this order.
+It its recommended to sync in this order since there are object dependencies as you progress through the list. If you pass the `--all` flag it will sync in this order.
 
-Just passing an object flag will print out the status of the environments,
+Just passing an object flag or `--all` will print out the status of the environments,
 
 ```
 $ zdsync --macros
