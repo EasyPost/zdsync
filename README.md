@@ -25,7 +25,7 @@ There are three ways to authenticate to the Zendesk API and different environmen
    * `SANDBOX_EMAIL` - The email that is used as your username when logging into your sandbox environment.
    * `SANDBOX_TOKEN` - An API Token for the sandbox environment.
    * `PRODUCTION_EMAIL` - The email that is used as your username when logging into your production environment.
-   * `PRODUCITON_TOKEN` - An API Token for the production environment.
+   * `PRODUCTION_TOKEN` - An API Token for the production environment.
  * OAuth Token
    * `SANDBOX_OAUTH_TOKEN` - An oauth token with _read/write_ access to the sandbox environment.
    * `PRODUCTION_OAUTH_TOKEN` - An oauth token with _read only_ access to the production environment.
